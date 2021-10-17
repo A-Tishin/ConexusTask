@@ -9,6 +9,7 @@ namespace ConexusTask
         {
         }
         
+        // True if 0 & Power of 2 (2, 8, 128...).
         public static bool IsPowerOfTwo(int num)
         {
             return (num & (num - 1)) == 0;
