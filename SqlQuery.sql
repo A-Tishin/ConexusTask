@@ -24,16 +24,16 @@ order by Eff desc;
 
 /* Department tree depth */
 with recursive cte as (
-select 1 as lvl, chiefid, id, departmentid
+select 1 as lvl, ChiefID, ID, DepartmentID
 from Employee
 where ChiefID is null
 union all
-select lvl + 1, E.ChiefID, E.id, E.DepartmentID
-from employee E
+select lvl + 1, E.ChiefID, E.ID, E.DepartmentID
+from Employee E
 join cte C
-on E.chiefid = C.id)
+on E.CiefID = C.ID)
 select max(lvl), name
 from cte 
-join department
-on department.id = cte.departmentid
-group by departmentid
+join Department
+on Department.ID = cte.DepartmentID
+group by DepartmentID
