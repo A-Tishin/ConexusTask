@@ -8,12 +8,27 @@ namespace ConexusTask
         static void Main(String[] args)
         {
         }
-        
+
+
+        // True if 0 or Power of 2 (2, 8, 128...) 
         public static bool IsPowerOfTwo(int num)
         {
             return (num & (num - 1)) == 0;
         }
-        
+
+        // Gets the count of 1 in binary form of num
+        public static int CountOne(int num)
+        {
+            int count = 0;
+            while (num != 0)
+            {
+                num = num & (num - 1);
+                count++;
+            }
+
+            return count;
+        }
+
         public static void ZeroesToEnd(int[] arr)
         {
             int numToShift = 0;

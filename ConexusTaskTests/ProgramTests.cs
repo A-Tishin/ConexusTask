@@ -12,13 +12,23 @@ namespace ConexusTask.Tests
         private static int[] _medianTestArr = new[] { 2, 6, 4, 4, 5, 5, 8, 7, 9, 4 };
 
         [TestMethod()]
-        [DataRow(128, true)]
+        [DataRow(0, true)]
         [DataRow(5, false)]
         [DataRow(-128, false)]
         public void IsPowerOfTwoTest(int isPower, bool methodResponse)
         {
             var result = Program.IsPowerOfTwo(isPower);
             Assert.IsTrue(result == methodResponse);
+        }
+
+        [TestMethod()]
+        [DataRow(1, 1)]
+        [DataRow(15, 4)]
+        [DataRow(125, 6)]
+        public void CountOneTest(int num, int onesCount)
+        {
+            var result = Program.CountOne(num);
+            Assert.AreEqual(result, onesCount);
         }
 
         [TestMethod()]
