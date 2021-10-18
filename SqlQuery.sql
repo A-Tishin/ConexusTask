@@ -8,7 +8,11 @@ group by D.Name
 order by Salary desc;
 
 /* Department chiefs */
-select * from Employee where ChiefID is null;
+select E.Name as Department_Lead, D.Name
+from Employee E
+join Department D
+on D.ID = E.DepartmentID
+where ChiefID is null;
 
 /* Department efficiency */
 select D.Name, count(*)/Salary as Eff

@@ -8,8 +8,6 @@ namespace ConexusTask
         static void Main(String[] args)
         {
         }
-
-
         // True if 0 or Power of 2 (2, 8, 128...) 
         public static bool IsPowerOfTwo(int num)
         {

@@ -1,5 +1,4 @@
-﻿using ConexusTask;
-using System.Linq;
+﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ConexusTask.Tests
